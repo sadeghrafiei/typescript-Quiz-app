@@ -4,6 +4,8 @@ import QuestionCard from './components/QuestionCard'
 
 import { Difficulty } from './components/API';
 
+import { GlobalStyle} from './App.styles'
+
 export type AnswerObject = {
   question: string;
   answer: string;
@@ -66,6 +68,8 @@ const App = () => {
   }
 
   return (
+    <>
+    <GlobalStyle />
     <div>
       <h1>REACT QUIZ</h1>
       {gameOver || userAnswers.length === TOTAL_QUESTIONS ? (
@@ -94,6 +98,7 @@ const App = () => {
       ) : null}
 
     </div>
+    </>
   );
 }
 
