@@ -21,7 +21,7 @@ const App = () => {
   const [questions, setQuestions] = useState<QuestionState[]>([]);
   const [number, setNumber] = useState(0);
   const [userAnswers, setUserAnswers] = useState<AnswerObject[]>([])
-  const [acore, setScore] = useState(0);
+  const [score, setScore] = useState(0);
   const [gameOver, setGameOver] = useState(true);
 
 
@@ -77,7 +77,7 @@ const App = () => {
           Start
         </button>
       ) : null}
-      {!gameOver ? <p className="score">Score:</p> : null}
+      {!gameOver ? <p className="score">Score: {score}</p> : null}
       {loading && <p>Loading Question ...</p>}
       {!loading && !gameOver && (
 
